@@ -11,3 +11,4 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 - Configurations:
   - Ensure the Jaeger-Client sends data to a running jaeger-docker instance via udp (in amgen case the endpoint will be provided, for your case you may need to run the docker image of jaeger)
   - Serverless framework should assume VPC , not public facing, so you may need to adjust serverless.yml and ensure it’s setup right so that the hello-world lambda endpoint is private and the jaeger reporter config sends traces to private ip also
+- Create document to write necessary steps
