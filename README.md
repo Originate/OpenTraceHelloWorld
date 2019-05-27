@@ -3,7 +3,7 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 
 # Steps
 
-- Create the hello-world app instrumented by Jaeger
+- [ ] Create the hello-world app instrumented by Jaeger
   - [x] Create a hello-world frontend app in NodeJS. Reference: https://github.com/yurishkuro/opentracing-tutorial/tree/master/nodejs/lesson01
   - [x] Configure the app to be traced by OpenTracing in Jaeger. Reference: https://github.com/jaegertracing/jaeger-client-node
   - [ ] Ensure the Jaeger-Client sends data to a running jaeger-docker instance via udp (in amgen case the endpoint will be provided, for your case you may need to run the docker image of jaeger)
