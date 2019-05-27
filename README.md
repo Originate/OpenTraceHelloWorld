@@ -1,7 +1,7 @@
 # OpenTraceHelloWorld
 A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS Lambda using Serverless framework.
 
-# Steps
+## Dev Step
 
 - [ ] Create the hello-world app instrumented by Jaeger
   - [x] Create a hello-world frontend app in NodeJS. Reference: https://github.com/yurishkuro/opentracing-tutorial/tree/master/nodejs/lesson01
@@ -13,3 +13,34 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 - [ ] Deploy the hello-world app to AWS using serverless
 - [ ] Configure serverless framework to assume VPC , not public facing, so you may need to adjust serverless.yml and ensure it’s setup right so that the hello-world lambda endpoint is private and the jaeger reporter config sends traces to private ip also
 - [ ] Create document to write necessary steps
+
+## Setup
+
+#### Prerequisites
+
+- Install Docker: [instruction](https://docs.docker.com/v17.12/docker-for-mac/install/)
+
+#### Run
+
+- Run the hello-world app with Node: `$ node hello.js Genova`
+- Run the docker-jaeger instance as the backend of Jaeger-client: 
+
+```
+$ docker run -d --name jaeger \
+  -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
+  -p 5775:5775/udp \
+  -p 6831:6831/udp \
+  -p 6832:6832/udp \
+  -p 5778:5778 \
+  -p 16686:16686 \
+  -p 14268:14268 \
+  -p 9411:9411 \
+  jaegertracing/all-in-one:1.6
+  ```
+
+  Understand docker-jaeger instance: https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image
+
+- View the traces:
+  - Open Jaeger UI in local browser: `http://localhost:16686`
+  - Select `hello-genova` in **Jaeger UI/Find Traces/Services**
+  - Select `say-hello` in **Jaeger UI/Find Traces/Operations**
