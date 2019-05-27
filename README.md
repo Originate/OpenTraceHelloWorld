@@ -43,7 +43,7 @@ b) Run the hello-world app with Node: `$ node hello.js Genova`
 
 _NOTE: a) MUST run before b) to receive traces. Because traces created in b) won't be sent to the jaeger-docker instance if it's not set to run via a)._
 
-c) View the traces:
+c) View traces in the Node hello-world app:
   - Open Jaeger UI in local browser: `http://localhost:16686`
   - Select `hello-genova` in **Jaeger UI/Find Traces/Services**
   - Select `say-hello` in **Jaeger UI/Find Traces/Operations**
