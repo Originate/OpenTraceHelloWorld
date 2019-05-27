@@ -22,8 +22,7 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 
 #### Run
 
-- Run the hello-world app with Node: `$ node hello.js Genova`
-- Run the docker-jaeger instance as the backend of Jaeger-client: 
+a) Run the docker-jaeger instance as the backend of Jaeger-client: 
 
 ```
 $ docker run -d --name jaeger \
@@ -40,7 +39,11 @@ $ docker run -d --name jaeger \
 
   Understand docker-jaeger instance: https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image
 
-- View the traces:
+b) Run the hello-world app with Node: `$ node hello.js Genova`
+
+_NOTE: a) MUST run before b) to receive traces. Because traces created in b) won't be sent to the jaeger-docker instance if it's not set to run via a)._
+
+c) View the traces:
   - Open Jaeger UI in local browser: `http://localhost:16686`
   - Select `hello-genova` in **Jaeger UI/Find Traces/Services**
   - Select `say-hello` in **Jaeger UI/Find Traces/Operations**
