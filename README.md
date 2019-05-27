@@ -18,7 +18,7 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 
 #### Prerequisites
 
-- Install Docker: [instruction](https://docs.docker.com/v17.12/docker-for-mac/install/)
+- [Install Docker](https://docs.docker.com/v17.12/docker-for-mac/install/)
 
 #### Run
 
