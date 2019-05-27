@@ -37,6 +37,10 @@ $ docker run -d --name jaeger \
   jaegertracing/all-in-one:1.6
   ```
 
+Browse Jaeger UI via `http://localhost:16686` to ensure the `jaeger` image is running successfuly:
+
+![jaeger-ui](markdown/jaeger-ui.png)
+
 Jaeger backend serves Jaeger UI for visualizing traces. Without it being set up, traces created in b) won't be visualizable, let alone further assessment and improvement of the app made easier via the visualization. [Read more](https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image) to understand docker-jaeger instance.
 
 To reset the `jaeger` image, stop the Docker image then remove it via `Docker stop jaeger; Docker rm jaeger` in commandline.
@@ -51,6 +55,10 @@ _NOTE:_
 
 #### View Traces
 
-  - Open Jaeger UI: browse `http://localhost:16686` in local browser
-  - Select service: select `hello-genova` in `Jaeger UI/Find Traces/Services`
-  - Select operation: select `say-hello` in `Jaeger UI/Find Traces/Operations`
+In Jaeger UI, select `hello-genova` in `Jaeger UI/Find Traces/Services` then hit `Find Traces` to see the `hello-genova` trace:
+
+![jaeger-ui](markdown/trace-details.png)
+
+Click the `hello-genova` trace to see span details:
+
+![jaeger-ui](markdown/span-details.png)
