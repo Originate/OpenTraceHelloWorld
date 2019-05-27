@@ -22,7 +22,7 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 
 #### Run
 
-a) Run the docker-jaeger instance as the backend of Jaeger-client: 
+a) Run Jaeger backend as an all-in-one Docker image:
 
 ```
 $ docker run -d --name jaeger \
@@ -37,7 +37,7 @@ $ docker run -d --name jaeger \
   jaegertracing/all-in-one:1.6
   ```
 
-  Understand docker-jaeger instance: https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image
+Jaeger backend serves Jaeger UI for visualizing traces. Without it being set up, traces created in b) won't be visualizable, let alone further assessment and improvement of the app made easier via the visualization. [Read more](https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image) to understand docker-jaeger instance.
 
 b) Run the hello-world app with Node: `$ node hello.js Genova`
 
