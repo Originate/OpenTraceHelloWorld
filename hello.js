@@ -26,12 +26,31 @@ function initTracer(serviceName) {
   return initJaegerTracer(config, options);
 }
 
-const tracer = initTracer("hello-genoa");
+const tracer = initTracer("hello-Genova");
 
 const sayHello = helloTo => {
+  
+  // Create span
+
   const span = tracer.startSpan("say-hello");
+
+  // Set tag to span
+
+  span.setTag("hello-to", helloTo);
+
+  // Configure log for the span
+
   const helloStr = `Hello, ${helloTo}!`;
+  span.log({
+    event: "string-format",
+    value: helloStr,
+  });
+
   console.log(helloStr);
+  span.log({ event: "print-string" });
+
+  // Finish span
+
   span.finish();
 };
 
