@@ -1,6 +1,13 @@
 # OpenTraceHelloWorld
 A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS Lambda using Serverless framework.
 
+**Problem Statement:** Need documentation and example hello-world app to instrument with Tracing.
+
+**Acceptance Criteria:**
+- Need a hello-world app repo that can be deployed with serverless framework to aws Lambda to help be a tutorial for instrumenting with opentracing ideally using typescript, but node is ok as well.
+- Ensure the jaeger-client sends data to a running jaeger-docker instance via udp (in amgen case the endpoint will be provided, for your case you may need to run the docker image of jaeger)
+- Serverless framework should assume VPC , not public facing, so you may need to adjust serverless.yml and ensure it’s setup right so that the hello-world lambda endpoint is private and the jaeger reporter config sends traces to private ip also
+
 ## Dev Step
 
 - [x] Create the hello-world app instrumented by Jaeger
