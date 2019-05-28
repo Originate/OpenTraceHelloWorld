@@ -11,6 +11,13 @@ function initTracer(serviceName) {
     },
     reporter: {
       logSpans: true,
+      // Provide the traces endpoint; this forces the client to connect directly to the Collector and send
+      // spans over HTTP
+      collectorEndpoint: "http://localhost:14268/api/traces",
+      // Provide username and password if authentication is enabled in the Collector
+      // TODO: check how is authentication configured in the Collector.
+//      username: 'gen',
+//      password: 'ova',
     },
   };
   const options = {
@@ -26,7 +33,7 @@ function initTracer(serviceName) {
   return initJaegerTracer(config, options);
 }
 
-const tracer = initTracer("hello-Genova");
+const tracer = initTracer("hello-genova");
 
 const sayHello = helloTo => {
 
