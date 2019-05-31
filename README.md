@@ -25,7 +25,7 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 
 #### Prerequisites
 
-- Install Node: Download the [Node package](https://nodejs.org/en/download/) for Macbook, then follow the installation steps
+- Install Node: download the [Node pre-built installer](https://nodejs.org/en/download/) for Macbook, then follow the installation steps
 - [Install Docker](https://docs.docker.com/v17.12/docker-for-mac/install/)
 
 #### Dependencies
