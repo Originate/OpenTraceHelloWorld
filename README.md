@@ -61,6 +61,8 @@ To reset the `jaeger` image, stop the Docker image then remove it via `Docker st
 
 b) Run the hello-world app with Node: `$ node hello.js Genova`
 
+![hello-output](markdown/hello-output.png)
+
 When the app is running, traces are created and set over to Jaeger UI, serverd by the `jaeger` Docker image created above. To view the traces, please refer to the [View Traces](#view-traces) section for details.
 
 _NOTE:_
