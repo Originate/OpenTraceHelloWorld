@@ -75,6 +75,6 @@ In Jaeger UI, select `hello-genova` in `Jaeger UI/Find Traces/Services` then hit
 
 ![jaeger-ui](markdown/trace-details.png)
 
-Click the `hello-genova` trace to see span details:
+Click the `hello-genova` trace to view span details:
 
 ![jaeger-ui](markdown/span-details.png)
