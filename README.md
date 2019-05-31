@@ -55,7 +55,7 @@ Browse Jaeger UI via `http://localhost:16686` to ensure the `jaeger` image is ru
 
 ![jaeger-ui](markdown/jaeger-ui.png)
 
-Jaeger backend serves Jaeger UI for visualizing traces. Without it being set up, traces created in b) won't be visualizable, let alone further assessment and improvement of the app made easier via the visualization. [Read more](https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image) to understand docker-jaeger instance.
+Jaeger backend serves Jaeger UI for visualizing traces. Without it being set up, traces created in b) won't be visualizable, let alone further assessment and improvement of the app made easier via the visualization. [Read more](https://www.jaegertracing.io/docs/1.6/getting-started/#all-in-one-docker-image) to understand the docker-jaeger instance.
 
 To reset the `jaeger` image, stop the Docker image then remove it via `Docker stop jaeger; Docker rm jaeger` in commandline.
 
