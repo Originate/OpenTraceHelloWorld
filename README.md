@@ -63,11 +63,11 @@ b) Run the hello-world app with Node: `$ node hello.js Genova`
 
 ![hello-output](markdown/hello-output.png)
 
-When the app is running, traces are created and set over to Jaeger UI, serverd by the `jaeger` Docker image created above. To view the traces, please refer to the [View Traces](#view-traces) section for details.
+When the app is running, traces are created and sent over to Jaeger UI, serverd by the `jaeger` Docker image created above. To view the traces, please refer to the [View Traces](#view-traces) section for details.
 
 _NOTE:_
 - _`Genova` is customizable to any value._
-- _a) and b) MUST be run in the above order, to send the latest traces to Jaeger UI._
+- _a) and b) MUST be executed in the above order, to send the latest traces to Jaeger UI._
 
 #### View Traces
 
