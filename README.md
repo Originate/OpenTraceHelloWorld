@@ -21,11 +21,18 @@ A hello-world app in NodeJS. Instrumented by Jaeger-Client, and deployed to AWS 
 - [ ] Configure serverless framework to assume VPC , not public facing, so you may need to adjust serverless.yml and ensure it’s setup right so that the hello-world lambda endpoint is private and the jaeger reporter config sends traces to private ip also
 - [ ] Create document to instruct instrumenting the app via Jaeger
 
-## Setup
+## Setup on MacBook
 
 #### Prerequisites
 
+- Install Node: Download the [Node package](https://nodejs.org/en/download/) for Macbook, then follow the installation steps
 - [Install Docker](https://docs.docker.com/v17.12/docker-for-mac/install/)
+
+#### Dependencies
+
+In project directory:
+
+- `jaeger-client`: `npm install --save jaeger-client`
 
 #### Run
 
