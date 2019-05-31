@@ -26,7 +26,7 @@ function initTracer(serviceName) {
   return initJaegerTracer(config, options);
 }
 
-const tracer = initTracer("hello-Genova");
+const tracer = initTracer("hello-genova");
 
 const sayHello = helloTo => {
 
